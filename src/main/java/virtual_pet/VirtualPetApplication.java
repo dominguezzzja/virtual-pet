@@ -6,7 +6,7 @@ public class VirtualPetApplication {
     static Scanner  inputScanner = new Scanner(System.in);
     public static void main(String[] args) {
 
-
+        
         
 
         boolean isFirstInput = true;
@@ -50,6 +50,17 @@ public class VirtualPetApplication {
             Tommy.tick();
         }
     }
+
+    public static void printStats() {
+            System.out.println("This are Tommy's stats!");
+            System.out.println("Name: " + Tommy.name);
+            System.out.println("Health: " + Tommy.health);
+            System.out.println("Hunger: " + Tommy.hunger);
+            System.out.println("Thirst: " + Tommy.thirst);
+            System.out.println("Boredom: " + Tommy.boredom);
+            System.out.println("Tiredness: " + Tommy.tiredness);
+            System.out.println("Waste: " + Tommy.waste);
+        }
 
     public static void inputEvaluation(String userChoice) {
         switch (userChoice) {
@@ -101,7 +112,7 @@ public class VirtualPetApplication {
 
             case "8":
                 System.out.println("This are Tommy's stats!");
-                
+                printStats();
                 break;
         }
     }
