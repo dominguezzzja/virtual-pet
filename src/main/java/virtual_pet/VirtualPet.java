@@ -262,10 +262,9 @@ public class VirtualPet {
         this.increaseHunger(1);
         this.increaseBoredom(2);
         this.increaseTiredness(1);
-
     }
 
-    public void printStats() {
+        public void printStats() {
         System.out.println("Stats" + this.name);
         System.out.println("Health: " + this.health);
         System.out.println("Hunger: " + this.hunger);
@@ -273,6 +272,7 @@ public class VirtualPet {
         System.out.println("Boredom: " + this.boredom);
         System.out.println("Tiredness: " + this.tiredness);
         System.out.println("Waste: " + this.waste);
-    }
+    
 
+    }
 }

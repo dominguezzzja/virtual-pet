@@ -1,6 +1,4 @@
 package virtual_pet;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.Scanner;
 
 public class VirtualPetApplication {
@@ -9,15 +7,7 @@ public class VirtualPetApplication {
     public static void main(String[] args) {
 
 
-        Timer timer = new Timer();
-        TimerTask task = new TimerTask() {
-            @Override
-            public void run() {
-                Tommy.tick();
-            }
-        };
-
-        timer.schedule(task, 0, 15000);
+        
 
         boolean isFirstInput = true;
 
@@ -30,10 +20,13 @@ public class VirtualPetApplication {
                                  " ( | | )\n" +
                                   "(__d b__)");
 
-            Tommy.printStats();
+
+
+            
             if (isFirstInput) {
                 System.out.println("Say hi to him!");
-                String input = inputScanner.nextLine();
+                String inputActivity = inputScanner.nextLine();
+                inputEvaluation(inputActivity);
                 isFirstInput = false;
             }
 
@@ -54,6 +47,7 @@ public class VirtualPetApplication {
             System.out.println("8. Look at Tommy's stats!");
             String inputActivity = inputScanner.nextLine();
             inputEvaluation(inputActivity);
+            Tommy.tick();
         }
     }
 
@@ -107,9 +101,9 @@ public class VirtualPetApplication {
 
             case "8":
                 System.out.println("This are Tommy's stats!");
-                Tommy.printStats();
+                
                 break;
         }
     }
+    
 }
-
